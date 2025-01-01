@@ -35,19 +35,24 @@
             panel2 = new Panel();
             label1 = new Label();
             textBox1 = new TextBox();
+            panel3 = new Panel();
+            button2 = new Button();
+            panel5 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.BackColor = Color.FromArgb(23, 73, 122);
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button1);
             panel1.Location = new Point(2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(271, 647);
+            panel1.Size = new Size(271, 728);
             panel1.TabIndex = 0;
             // 
             // button5
@@ -116,27 +121,64 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(512, 124);
+            textBox1.Location = new Point(189, 20);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Search yout Favourite Book";
             textBox1.Size = new Size(289, 31);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // panel3
+            // 
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel3.AutoScroll = true;
+            panel3.BackColor = Color.White;
+            panel3.Location = new Point(272, 161);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(800, 569);
+            panel3.TabIndex = 2;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(100, 151, 177);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Times New Roman", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(540, 20);
+            button2.Name = "button2";
+            button2.Size = new Size(87, 33);
+            button2.TabIndex = 0;
+            button2.Text = "search";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(button2);
+            panel5.Controls.Add(textBox1);
+            panel5.Location = new Point(279, 102);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(790, 62);
+            panel5.TabIndex = 3;
             // 
             // userDashboard
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1072, 661);
-            Controls.Add(textBox1);
+            BackColor = Color.White;
+            ClientSize = new Size(1072, 733);
+            Controls.Add(panel5);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(panel3);
             Name = "userDashboard";
             Text = "userDashboard";
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -148,5 +190,8 @@
         private Label label1;
         private Button button5;
         private Button button4;
+        private Panel panel3;
+        private Button button2;
+        private Panel panel5;
     }
 }
