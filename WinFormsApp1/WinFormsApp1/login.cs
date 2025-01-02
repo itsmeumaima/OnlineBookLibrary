@@ -37,18 +37,23 @@ namespace WinFormsApp1
                 con.Open();
 
                 string query = selectedUserType == "Admin"
-                    ? "SELECT COUNT(1) FROM Admin WHERE Username=@Username AND Password=@password"
-                    : "SELECT COUNT(1) FROM [User] WHERE Username=@Username AND Password=@password";
+                    ? "SELECT Id FROM Admin WHERE Username=@Username AND Password=@password"
+                    : "SELECT Id FROM [User] WHERE Username=@Username AND Password=@password";
 
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Username", username);
                 cmd.Parameters.AddWithValue("@password", password);
 
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                object result = cmd.ExecuteScalar();
 
-                if (count == 1)
+                if (result != null)
                 {
+                    int userId = Convert.ToInt32(result);
+                    GlobalVariables.UserId = userId; // Store the user ID in the global variable
+
                     MessageBox.Show($"Welcome, {username}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Open the next form based on user type
                     if (selectedUserType == "Admin")
                     {
                         adminDashboard admin = new adminDashboard();
@@ -57,11 +62,10 @@ namespace WinFormsApp1
                     }
                     else
                     {
-                        userDashboard userdas=new userDashboard();
+                        userDashboard userdas = new userDashboard();
                         userdas.ShowDialog();
                         this.Close();
                     }
-                    // Open the next form based on user type
                 }
                 else
                 {

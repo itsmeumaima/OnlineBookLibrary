@@ -77,12 +77,13 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(42, 240);
+            button4.Location = new Point(42, 241);
             button4.Name = "button4";
             button4.Size = new Size(177, 43);
             button4.TabIndex = 3;
-            button4.Text = "Books";
+            button4.Text = "Cart";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button1
             // 
@@ -95,7 +96,7 @@
             button1.Name = "button1";
             button1.Size = new Size(177, 43);
             button1.TabIndex = 0;
-            button1.Text = "Cart";
+            button1.Text = "Search Book";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 

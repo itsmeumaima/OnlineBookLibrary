@@ -27,9 +27,12 @@ namespace WinFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //this.Close();
+            //Form1 form = new Form1();
+            //form.ShowDialog();
             this.Close();
             Form1 form = new Form1();
-            form.ShowDialog();
+            form.Show();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -95,9 +98,13 @@ namespace WinFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            delete del = new delete();
-            del.ShowDialog();
+            //delete del = new delete();
+            //del.ShowDialog();
+            //this.Close();
             this.Close();
+            delete del = new delete();
+            del.Show();
+
         }
 
         private void adminDashboard_Load_1(object sender, EventArgs e)
@@ -107,16 +114,21 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            update up = new update();
-            up.ShowDialog();
             this.Close();
+            update up = new update();
+            up.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            userdetails us = new userdetails();
-            us.ShowDialog();
             this.Close();
+            userdetails us = new userdetails();
+            us.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

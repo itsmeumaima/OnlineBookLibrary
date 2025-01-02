@@ -137,6 +137,7 @@
             button1.TabIndex = 0;
             button1.Text = "Add Book";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 

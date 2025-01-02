@@ -69,30 +69,39 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            adminDashboard ad = new adminDashboard();
-            ad.ShowDialog();
             this.Close();
+            adminDashboard form = new adminDashboard();
+            form.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            update up = new update();
-            up.ShowDialog();
+     
+            //this.Close();
+            //update up = new update();
+            //up.Show();
             this.Close();
+            update up = new update();
+            up.Show();
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            
             this.Close();
             Form1 form = new Form1();
-            form.ShowDialog();
+            form.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            userdetails us = new userdetails();
-            us.ShowDialog();
+            //userdetails us = new userdetails();
+            //us.ShowDialog();
+            //this.Close();
             this.Close();
+            userdetails us = new userdetails();
+            us.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
