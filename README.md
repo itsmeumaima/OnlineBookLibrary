@@ -1,7 +1,8 @@
 # OnlineBookLibrary
 
 ## HOME Page
-![image](https://github.com/user-attachments/assets/f04f0f1e-79eb-43dd-aa1b-5887ba673df9)
+![image](https://github.com/user-attachments/assets/e51cd59d-8af2-4e89-ba02-ba7e108c974e)
+
 
 ## SIGNUP Page:
 ![image](https://github.com/user-attachments/assets/9ace6882-1c26-4a56-954f-d33cda8eeb81)
